@@ -1,9 +1,17 @@
 <?php 
+//DB Credentials
+define('DB_HOST', 'hostname');
+define('DB_USER', 'user_name');
+define('DB_PASS', 'password');
+define('DB_NAME', 'db_name');
 //lib for parsing
 require_once"simple_html_dom.php";
+require_once"db.class.php";
 
 //URL for parsing
 $url = 'http://somesite.com';
+
+$db = new DB('DB_HOST', 'DB_USER', 'DB_PASS', 'DB_NAME');
 
 function getArticleData($url) 
 {
